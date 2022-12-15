@@ -6,7 +6,6 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenViewBase
-
 from reviews.models import Review
 from titles.models import Category, Genre, Title
 from users.models import User
