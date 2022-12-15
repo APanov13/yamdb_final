@@ -2,7 +2,6 @@ from dataclasses import dataclass
 
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
-
 from users.models import User
 
 
