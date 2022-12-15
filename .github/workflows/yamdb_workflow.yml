@@ -41,4 +41,5 @@ jobs:
         cd api_yamdb/
         # запустить написанные разработчиком тесты
         # python manage.py test
+
         pytest
