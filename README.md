@@ -1,4 +1,4 @@
-![Workflow](https://docs.github.com/assets/cb-6722/images/help/repository/actions-workflow-status-badge.png)
+![Workflow](https://github.com/APanov13/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 # Описание проекта YaMDb  
 
