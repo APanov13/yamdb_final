@@ -1,28 +1,24 @@
 from django.db.models import Avg
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, permissions, status, viewsets
-from rest_framework.decorators import action, APIView
+from rest_framework.decorators import APIView, action
 from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenViewBase
+
 from reviews.models import Review
 from titles.models import Category, Genre, Title
 from users.models import User
-from .utils import ConfirmationManager
+
 from .filters import TitleFilter
 from .permissions import AuthorOrStaffOrReadOnly, IsAdmin, IsAdminOrReadOnly
-from .serializers import (
-    CategorySerializer,
-    CommentSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    TitleReadSerializer,
-    TitleSerializer,
-    TokenSerializer,
-    UserSerializerForAdmin,
-    UserSerializerForUser
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleSerializer,
+                          TokenSerializer, UserSerializerForAdmin,
+                          UserSerializerForUser)
+from .utils import ConfirmationManager
 
 
 class SignupView(APIView):

@@ -1,12 +1,12 @@
 import csv
 import os
 
-from django.core.management.base import BaseCommand, CommandError
 from django.conf import settings
-from titles.models import Category, Genre, GenreTitle, Title
-from reviews.models import Comment, Review
-from users.models import User
+from django.core.management.base import BaseCommand, CommandError
 
+from reviews.models import Comment, Review
+from titles.models import Category, Genre, GenreTitle, Title
+from users.models import User
 
 ALREDY_LOADED_ERROR_MESSAGE = """
 If you need to reload the example data from the CSV file,

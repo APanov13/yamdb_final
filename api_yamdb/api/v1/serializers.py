@@ -1,8 +1,10 @@
 import datetime as dt
+
 from django.contrib.auth import authenticate
 from django.core.validators import MaxValueValidator
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
+
 from reviews.models import Comment, Review
 from titles.models import Category, Genre, Title
 from users.models import User
