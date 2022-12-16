@@ -55,6 +55,8 @@ jobs:
     needs: tests
     steps:
       - name: Check out the repo
+          run: |
+            cd api_yamdb/
         # Проверка доступности репозитория Docker Hub для workflow
         uses: actions/checkout@v2 
       - name: Set up Docker Buildx
