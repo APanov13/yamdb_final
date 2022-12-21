@@ -10,10 +10,11 @@ services:
       - ./.env
 
   web:
-    build: ../api_yamdb/
+    # build: ../api_yamdb/
     image: apanov13/api_yamdb:v1
     container_name: api_yamdb
     restart: always
+    
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
