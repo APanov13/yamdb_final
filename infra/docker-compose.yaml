@@ -11,8 +11,8 @@ services:
 
   web:
     # build: ../api_yamdb/
-    image: apanov13/api_yamdb:v1
-    container_name: api_yamdb
+    image: apanov13/yamdb_final
+    container_name: yamdb_final
     restart: always
     
     volumes:

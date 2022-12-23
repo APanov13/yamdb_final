@@ -76,7 +76,6 @@ jobs:
           # tags: apanov13/yamdb_final:latest
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
 
-
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
@@ -91,7 +90,6 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
 
-            # sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
@@ -101,6 +99,9 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
+
+            #test with this command
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose up -d
 
     # runs-on: ubuntu-latest
