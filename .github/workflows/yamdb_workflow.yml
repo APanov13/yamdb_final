@@ -101,7 +101,7 @@ jobs:
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
 
             #test with this command
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+            # sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose up -d
 
     # runs-on: ubuntu-latest
