@@ -95,7 +95,6 @@ jobs:
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
-
             # sudo docker-compose stop
             # sudo docker-compose rm web
             # touch .env
