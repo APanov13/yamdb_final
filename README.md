@@ -1,5 +1,8 @@
 ![Workflow](https://github.com/APanov13/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+IP сервера:
+http://130.193.37.29/api/v1/
+
 
 # Описание проекта YaMDb  
 
