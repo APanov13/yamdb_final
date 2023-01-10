@@ -3,6 +3,9 @@ version: '3.8'
 services:
 
   db:
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+    container_name: db
     image: postgres:13.0-alpine
     volumes:
       - db_volume:/var/lib/postgresql/data/
